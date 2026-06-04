@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saranya Sidharth - Media Kit</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary-color: #E91E63;
+            --secondary-color: #9C27B0;
+            --text-dark: #212121;
+            --text-light: #757575;
+            --bg-light: #FAFAFA;
+            --white: #FFFFFF;
+            --border-color: #E0E0E0;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: linear-gradient(to bottom, #FAFAFA 0%, #F5F5F5 100%);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 60px 40px;
+            text-align: center;
+            border-radius: 20px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .hero .handle {
+            font-size: 1.5em;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .hero .tagline {
+            font-size: 1.2em;
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stat-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            transition: left 0.3s ease;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(233, 30, 99, 0.2);
+        }
+
+        .stat-card:hover::before {
+            left: 0;
+        }
+
+        .stat-number {
+            font-size: 2.5em;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 1em;
+            color: var(--text-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Section */
+        .section {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.2em;
+            margin-bottom: 25px;
+            color: var(--text-dark);
+            border-bottom: 3px solid var(--primary-color);
+            padding-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        /* About Section */
+        .about-content {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: var(--text-light);
+        }
+
+        /* Demographics */
+        .demo-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 20px;
+        }
+
+        .demo-item h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .demo-bar {
+            margin-bottom: 15px;
+        }
+
+        .demo-bar-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 5px;
+            font-size: 0.95em;
+        }
+
+        .demo-bar-fill {
+            height: 8px;
+            background: var(--border-color);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .demo-bar-progress {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+
+        /* Services */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .service-card {
+            padding: 25px;
+            border: 2px solid var(--border-color);
+            border-radius: 10px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            border-color: var(--primary-color);
+            background: linear-gradient(135deg, rgba(233, 30, 99, 0.05), rgba(156, 39, 176, 0.05));
+            transform: scale(1.05);
+        }
+
+        .service-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+
+        .service-name {
+            font-size: 1.2em;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--text-dark);
+        }
+
+        .service-price {
+            font-size: 1.1em;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        /* Contact */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 1.1em;
+        }
+
+        .contact-icon {
+            font-size: 1.5em;
+            color: var(--primary-color);
+            width: 40px;
+            text-align: center;
+        }
+
+        .contact-link {
+            color: var(--text-dark);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-link:hover {
+            color: var(--primary-color);
+        }
+
+        /* CTA Button */
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: var(--white);
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            margin-top: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 5px 15px rgba(233, 30, 99, 0.3);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(233, 30, 99, 0.4);
+        }
+
+        /* Highlights */
+        .highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .highlight-item {
+            padding: 20px;
+            background: linear-gradient(135deg, rgba(233, 30, 99, 0.1), rgba(156, 39, 176, 0.1));
+            border-radius: 10px;
+            text-align: center;
+        }
+
+        .highlight-item strong {
+            display: block;
+            color: var(--primary-color);
+            font-size: 1.1em;
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        /* Engagement Rate Badge */
+        .engagement-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #4CAF50, #8BC34A);
+            color: white;
+            padding: 8px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9em;
+            margin-top: 15px;
+            box-shadow: 0 3px 10px rgba(76, 175, 80, 0.3);
+        }
+
+        /* Value Proposition */
+        .value-prop {
+            background: linear-gradient(135deg, rgba(233, 30, 99, 0.1), rgba(156, 39, 176, 0.1));
+            padding: 30px;
+            border-radius: 15px;
+            border-left: 5px solid var(--primary-color);
+            margin: 20px 0;
+        }
+
+        .value-prop h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .value-prop ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .value-prop li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+
+        .value-prop li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        /* Testimonial Section */
+        .testimonial {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 10px;
+            font-style: italic;
+            color: var(--text-light);
+            border-left: 4px solid var(--primary-color);
+            margin: 20px 0;
+        }
+
+        .testimonial-author {
+            font-style: normal;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-top: 10px;
+        }
+
+        /* Animated Counter Effect */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .stat-card {
+            animation: fadeInUp 0.6s ease-out;
+        }
+
+        .stat-card:nth-child(1) { animation-delay: 0.1s; }
+        .stat-card:nth-child(2) { animation-delay: 0.2s; }
+        .stat-card:nth-child(3) { animation-delay: 0.3s; }
+        .stat-card:nth-child(4) { animation-delay: 0.4s; }
+
+        /* Package Cards */
+        .package-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        .package-card {
+            background: var(--white);
+            border-radius: 15px;
+            padding: 35px 25px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .package-card:hover {
+            border-color: var(--primary-color);
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(233, 30, 99, 0.2);
+        }
+
+        .package-card.featured {
+            border-color: var(--primary-color);
+            position: relative;
+        }
+
+        .package-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            padding: 5px 20px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .package-title {
+            font-size: 1.5em;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .package-price {
+            font-size: 1.1em;
+            color: var(--primary-color);
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .package-features {
+            list-style: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .package-features li {
+            padding: 8px 0;
+            color: var(--text-light);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .package-features li::before {
+            content: '●';
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+        }
+
+        /* Footer */
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--text-light);
+            font-size: 0.9em;
+        }
+
+        /* Print Styles */
+        @media print {
+            body {
+                background: white;
+            }
+            
+            .container {
+                max-width: 100%;
+                padding: 20px;
+            }
+
+            .stat-card, .section {
+                box-shadow: none;
+                border: 1px solid var(--border-color);
+                page-break-inside: avoid;
+            }
+
+            .hero {
+                background: var(--primary-color);
+                page-break-after: avoid;
+            }
+
+            .cta-button {
+                display: none;
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2em;
+            }
+
+            .hero .handle {
+                font-size: 1.2em;
+            }
+
+            .hero .tagline {
+                font-size: 1em;
+            }
+
+            .section {
+                padding: 25px;
+            }
+
+            .section-title {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Hero Section -->
+        <div class="hero">
+            <h1>Saranya Sidharth</h1>
+            <div class="handle">@saranya_sidharth</div>
+            <p class="tagline">Creating pretty things ✨<br>Fashion | Beauty | Lifestyle Content Creator</p>
+            <div class="engagement-badge" style="margin-top: 20px;">Micro-Influencer | 5K+ Engaged Followers | 1.7L Monthly Views</div>
+        </div>
+
+        <!-- Quick Summary -->
+        <div class="section" style="background: linear-gradient(135deg, rgba(233, 30, 99, 0.05), rgba(156, 39, 176, 0.05)); border-left: 5px solid var(--primary-color);">
+            <h2 class="section-title">At a Glance</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px; margin-top: 20px;">
+                <div>
+                    <strong style="color: var(--primary-color); font-size: 1.1em;">Primary Audience</strong>
+                    <p style="color: var(--text-light); margin-top: 5px;">Women 18-34 (91.5%)</p>
+                </div>
+                <div>
+                    <strong style="color: var(--primary-color); font-size: 1.1em;">Content Focus</strong>
+                    <p style="color: var(--text-light); margin-top: 5px;">Reels, Fashion, Beauty</p>
+                </div>
+                <div>
+                    <strong style="color: var(--primary-color); font-size: 1.1em;">Geographic Reach</strong>
+                    <p style="color: var(--text-light); margin-top: 5px;">India (88%) + International</p>
+                </div>
+                <div>
+                    <strong style="color: var(--primary-color); font-size: 1.1em;">Engagement Style</strong>
+                    <p style="color: var(--text-light); margin-top: 5px;">Authentic & Relatable</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number">1.7L</div>
+                <div class="stat-label">Profile Views (30 Days)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">83.8K</div>
+                <div class="stat-label">Accounts Reached (30 Days)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">5,092</div>
+                <div class="stat-label">Engaged Followers</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">15K</div>
+                <div class="stat-label">Reels Interactions (30 Days)</div>
+            </div>
+        </div>
+
+        <!-- About Section -->
+        <div class="section">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <p>I'm a passionate fashion, beauty, and lifestyle content creator dedicated to sharing authentic and relatable content with my engaged community. With a strong focus on Reels and visual storytelling, I create content that resonates with young, fashion-forward audiences across India and beyond.</p>
+                <br>
+                <p>My content blends trend-focused fashion insights, honest beauty reviews, and lifestyle inspiration, making me an ideal partner for brands looking to connect with millennial and Gen-Z consumers.</p>
+            </div>
+            <div class="value-prop">
+                <h3>What Sets Me Apart</h3>
+                <ul>
+                    <li>Authentic, relatable voice that builds genuine connections with followers</li>
+                    <li>Proven expertise in Reels - my primary content format with 15K monthly interactions</li>
+                    <li>Highly engaged micro-influencer community (5K+ followers with exceptional reach)</li>
+                    <li>Professional content creation with timely delivery and clear communication</li>
+                    <li>Deep understanding of Indian fashion and beauty trends</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Audience Demographics -->
+        <div class="section">
+            <h2 class="section-title">Audience Demographics</h2>
+            <div class="demo-grid">
+                <div class="demo-item">
+                    <h3>Gender Distribution</h3>
+                    <div class="demo-bar">
+                        <div class="demo-bar-label">
+                            <span>Women</span>
+                            <span>69.9%</span>
+                        </div>
+                        <div class="demo-bar-fill">
+                            <div class="demo-bar-progress" style="width: 69.9%"></div>
+                        </div>
+                    </div>
+                    <div class="demo-bar">
+                        <div class="demo-bar-label">
+                            <span>Men</span>
+                            <span>30.1%</span>
+                        </div>
+                        <div class="demo-bar-fill">
+                            <div class="demo-bar-progress" style="width: 30.1%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-item">
+                    <h3>Age Range</h3>
+                    <div class="demo-bar">
+                        <div class="demo-bar-label">
+                            <span>25-34 (Primary)</span>
+                            <span>50.5%</span>
+                        </div>
+                        <div class="demo-bar-fill">
+                            <div class="demo-bar-progress" style="width: 50.5%"></div>
+                        </div>
+                    </div>
+                    <div class="demo-bar">
+                        <div class="demo-bar-label">
+                            <span>18-24</span>
+                            <span>41.0%</span>
+                        </div>
+                        <div class="demo-bar-fill">
+                            <div class="demo-bar-progress" style="width: 41.0%"></div>
+                        </div>
+                    </div>
+                    <div class="demo-bar">
+                        <div class="demo-bar-label">
+                            <span>35-44</span>
+                            <span>4.6%</span>
+                        </div>
+                        <div class="demo-bar-fill">
+                            <div class="demo-bar-progress" style="width: 4.6%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="demo-item">
+                    <h3>Top Locations</h3>
+                    <div class="demo-bar">
+                        <div class="demo-bar-label">
+                            <span>India</span>
+                            <span>88.2%</span>
+                        </div>
+                        <div class="demo-bar-fill">
+                            <div class="demo-bar-progress" style="width: 88.2%"></div>
+                        </div>
+                    </div>
+                    <div class="demo-bar">
+                        <div class="demo-bar-label">
+                            <span>UAE</span>
+                            <span>3.1%</span>
+                        </div>
+                        <div class="demo-bar-fill">
+                            <div class="demo-bar-progress" style="width: 3.1%"></div>
+                        </div>
+                    </div>
+                    <div class="demo-bar">
+                        <div class="demo-bar-label">
+                            <span>UK</span>
+                            <span>1.4%</span>
+                        </div>
+                        <div class="demo-bar-fill">
+                            <div class="demo-bar-progress" style="width: 1.4%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Performance -->
+        <div class="section">
+            <h2 class="section-title">Content Performance Highlights</h2>
+            <div style="text-align: center; margin-bottom: 25px;">
+                <div class="engagement-badge">⚡ 16.5x Reach Multiplier (83.8K reach from 5K followers)</div>
+            </div>
+            <div class="highlights">
+                <div class="highlight-item">
+                    <strong>🎬 Reels Powerhouse</strong>
+                    15K interactions - primary content format
+                </div>
+                <div class="highlight-item">
+                    <strong>📈 Exceptional Reach</strong>
+                    83.8K accounts reached monthly
+                </div>
+                <div class="highlight-item">
+                    <strong>👁️ Profile Views</strong>
+                    1.7L views in last 30 days
+                </div>
+                <div class="highlight-item">
+                    <strong>🔗 Bio Link Clicks</strong>
+                    28 taps driving traffic
+                </div>
+                <div class="highlight-item">
+                    <strong>📊 Engagement Rate</strong>
+                    High interaction rate on all content
+                </div>
+                <div class="highlight-item">
+                    <strong>🌍 Geographic Reach</strong>
+                    88% India + 12% international
+                </div>
+            </div>
+        </div>
+
+        <!-- Collaboration Packages -->
+        <div class="section">
+            <h2 class="section-title">Collaboration Packages</h2>
+            <p style="text-align: center; color: var(--text-light); margin-bottom: 30px; font-size: 1.1em;">
+                Flexible packages designed to maximize your brand's visibility and engagement
+            </p>
+            <div class="package-grid">
+                <div class="package-card">
+                    <div class="package-title">Starter</div>
+                    <div class="package-price">Contact for Rates</div>
+                    <ul class="package-features">
+                        <li>1 Sponsored Reel (15-30 sec)</li>
+                        <li>3 Instagram Stories (24hrs)</li>
+                        <li>Product mention in bio link</li>
+                        <li>Usage rights for 30 days</li>
+                        <li>1 round of revisions</li>
+                    </ul>
+                </div>
+                <div class="package-card featured">
+                    <div class="package-title">Growth</div>
+                    <div class="package-price">Contact for Rates</div>
+                    <ul class="package-features">
+                        <li>2 Sponsored Reels</li>
+                        <li>1 Feed Post (carousel or single)</li>
+                        <li>5 Instagram Stories</li>
+                        <li>Product review & unboxing</li>
+                        <li>Bio link for 60 days</li>
+                        <li>Usage rights for 90 days</li>
+                        <li>2 rounds of revisions</li>
+                        <li>Performance analytics report</li>
+                    </ul>
+                </div>
+                <div class="package-card">
+                    <div class="package-title">Premium</div>
+                    <div class="package-price">Contact for Rates</div>
+                    <ul class="package-features">
+                        <li>3 Sponsored Reels</li>
+                        <li>2 Feed Posts</li>
+                        <li>10 Instagram Stories</li>
+                        <li>Detailed product review</li>
+                        <li>Unboxing video</li>
+                        <li>Bio link for 90 days</li>
+                        <li>Unlimited usage rights</li>
+                        <li>Unlimited revisions</li>
+                        <li>Detailed analytics & insights</li>
+                        <li>Priority support</li>
+                    </ul>
+                </div>
+            </div>
+            <p style="margin-top: 30px; color: var(--text-light); text-align: center; font-size: 1.05em;">
+                💡 <strong>Custom packages available!</strong> Let's create a collaboration that perfectly fits your brand's goals and budget.
+            </p>
+        </div>
+
+        <!-- Why Work With Me -->
+        <div class="section">
+            <h2 class="section-title">Why Partner With Me?</h2>
+            <div class="highlights">
+                <div class="highlight-item">
+                    <strong>Authentic Voice</strong>
+                    Genuine, relatable content that connects
+                </div>
+                <div class="highlight-item">
+                    <strong>Engaged Community</strong>
+                    70% female audience, ages 18-34
+                </div>
+                <div class="highlight-item">
+                    <strong>Reels Expertise</strong>
+                    Proven track record with video content
+                </div>
+                <div class="highlight-item">
+                    <strong>Professional</strong>
+                    Timely delivery and clear communication
+                </div>
+                <div class="highlight-item">
+                    <strong>High ROI</strong>
+                    16.5x reach multiplier on followers
+                </div>
+                <div class="highlight-item">
+                    <strong>Trend-Savvy</strong>
+                    Always on top of latest fashion & beauty trends
+                </div>
+            </div>
+        </div>
+
+        <!-- Ideal Brand Categories -->
+        <div class="section">
+            <h2 class="section-title">Perfect For These Brands</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">👗</div>
+                    <div class="service-name">Fashion Brands</div>
+                    <p style="color: var(--text-light); font-size: 0.9em; margin-top: 10px;">Clothing, accessories, footwear</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💄</div>
+                    <div class="service-name">Beauty Products</div>
+                    <p style="color: var(--text-light); font-size: 0.9em; margin-top: 10px;">Makeup, skincare, cosmetics</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">✨</div>
+                    <div class="service-name">Lifestyle Brands</div>
+                    <p style="color: var(--text-light); font-size: 0.9em; margin-top: 10px;">Home decor, wellness, self-care</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💍</div>
+                    <div class="service-name">Jewelry & Accessories</div>
+                    <p style="color: var(--text-light); font-size: 0.9em; margin-top: 10px;">Fashion jewelry, watches, bags</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🛍️</div>
+                    <div class="service-name">E-commerce Platforms</div>
+                    <p style="color: var(--text-light); font-size: 0.9em; margin-top: 10px;">Online shopping, apps, services</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="section">
+            <h2 class="section-title">Let's Collaborate!</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <span class="contact-icon">📧</span>
+                    <a href="mailto:saranyasidharth00@gmail.com" class="contact-link">saranyasidharth00@gmail.com</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📱</span>
+                    <a href="tel:+918590935081" class="contact-link">+91 8590935081</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">📷</span>
+                    <a href="https://instagram.com/saranya_sidharth" target="_blank" class="contact-link">@saranya_sidharth</a>
+                </div>
+                <div class="contact-item">
+                    <span class="contact-icon">🔗</span>
+                    <a href="https://wishlink.com/saranyasidharth" target="_blank" class="contact-link">wishlink.com/saranyasidharth</a>
+                </div>
+            </div>
+            <div style="text-align: center;">
+                <a href="mailto:saranyasidharth00@gmail.com?subject=Brand Collaboration Inquiry" class="cta-button">Get In Touch</a>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>Media Kit - @saranya_sidharth | Last Updated: June 2026</p>
+            <p>All statistics are based on Instagram Insights data from the last 30 days</p>
+        </div>
+    </div>
+</body>
+</html>
