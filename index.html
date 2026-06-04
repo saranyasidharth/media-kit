@@ -392,6 +392,66 @@
             }
         }
 
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+        }
+
+        @keyframes shimmer {
+            0% {
+                background-position: -1000px 0;
+            }
+            100% {
+                background-position: 1000px 0;
+            }
+        }
+
         .stat-card {
             animation: fadeInUp 0.6s ease-out;
         }
@@ -400,6 +460,41 @@
         .stat-card:nth-child(2) { animation-delay: 0.2s; }
         .stat-card:nth-child(3) { animation-delay: 0.3s; }
         .stat-card:nth-child(4) { animation-delay: 0.4s; }
+
+        .section {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero {
+            animation: scaleIn 0.8s ease-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255,255,255,0.1), transparent);
+            animation: shimmer 3s infinite;
+        }
+
+        .engagement-badge {
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        .service-icon {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .service-card:nth-child(1) .service-icon { animation-delay: 0s; }
+        .service-card:nth-child(2) .service-icon { animation-delay: 0.2s; }
+        .service-card:nth-child(3) .service-icon { animation-delay: 0.4s; }
+        .service-card:nth-child(4) .service-icon { animation-delay: 0.6s; }
+        .service-card:nth-child(5) .service-icon { animation-delay: 0.8s; }
 
         /* Package Cards */
         .package-grid {
@@ -513,26 +608,237 @@
             }
         }
 
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* Responsive */
+        @media (max-width: 1024px) {
+            .container {
+                padding: 30px 15px;
+            }
+
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .demo-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .package-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         @media (max-width: 768px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            .hero {
+                padding: 40px 25px;
+                border-radius: 15px;
+                margin-bottom: 30px;
+            }
+
             .hero h1 {
-                font-size: 2em;
+                font-size: 2.2em;
+                letter-spacing: 1px;
             }
 
             .hero .handle {
-                font-size: 1.2em;
+                font-size: 1.1em;
             }
 
             .hero .tagline {
-                font-size: 1em;
+                font-size: 0.95em;
+                line-height: 1.6;
             }
 
-            .section {
+            .engagement-badge {
+                font-size: 0.8em;
+                padding: 6px 15px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .stat-card {
                 padding: 25px;
             }
 
+            .stat-number {
+                font-size: 2em;
+            }
+
+            .stat-label {
+                font-size: 0.9em;
+            }
+
+            .section {
+                padding: 25px 20px;
+                border-radius: 12px;
+                margin-bottom: 20px;
+            }
+
             .section-title {
-                font-size: 1.5em;
+                font-size: 1.6em;
+                margin-bottom: 20px;
+            }
+
+            .about-content {
+                font-size: 1em;
+            }
+
+            .demo-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+
+            .demo-item h3 {
+                font-size: 1.1em;
+            }
+
+            .services-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .service-card {
+                padding: 20px;
+            }
+
+            .highlights {
+                grid-template-columns: 1fr;
+                gap: 12px;
+            }
+
+            .highlight-item {
+                padding: 15px;
+            }
+
+            .package-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+
+            .package-card {
+                padding: 30px 20px;
+            }
+
+            .package-card.featured::before {
+                font-size: 0.7em;
+                padding: 4px 15px;
+            }
+
+            .contact-info {
+                gap: 15px;
+            }
+
+            .contact-item {
+                font-size: 1em;
+                flex-wrap: wrap;
+            }
+
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 1em;
+                width: 100%;
+                text-align: center;
+            }
+
+            .value-prop {
+                padding: 20px;
+            }
+
+            .value-prop h3 {
+                font-size: 1.2em;
+            }
+
+            .value-prop li {
+                font-size: 0.95em;
+                padding: 8px 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.8em;
+            }
+
+            .hero .handle {
+                font-size: 1em;
+            }
+
+            .hero .tagline {
+                font-size: 0.9em;
+            }
+
+            .section-title {
+                font-size: 1.4em;
+            }
+
+            .stat-number {
+                font-size: 1.8em;
+            }
+
+            .demo-bar-label {
+                font-size: 0.85em;
+            }
+
+            .service-icon {
+                font-size: 2em;
+            }
+
+            .service-name {
+                font-size: 1em;
+            }
+
+            .package-title {
+                font-size: 1.3em;
+            }
+
+            .contact-icon {
+                font-size: 1.2em;
+            }
+        }
+
+        /* Hover Effects Enhancement */
+        @media (hover: hover) {
+            .stat-card:hover {
+                transform: translateY(-8px) scale(1.02);
+            }
+
+            .service-card:hover {
+                transform: scale(1.08);
+                box-shadow: 0 10px 30px rgba(233, 30, 99, 0.3);
+            }
+
+            .package-card:hover {
+                transform: translateY(-15px);
+            }
+
+            .cta-button:hover {
+                transform: translateY(-5px) scale(1.05);
+            }
+        }
+
+        /* Touch Device Optimizations */
+        @media (hover: none) {
+            .stat-card:active {
+                transform: scale(0.98);
+            }
+
+            .service-card:active {
+                transform: scale(0.95);
+            }
+
+            .cta-button:active {
+                transform: scale(0.95);
             }
         }
     </style>
