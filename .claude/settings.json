@@ -1,0 +1,18 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --no-git)",
+      "Bash(npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --skip-git)",
+      "Bash(mv index.html.backup /tmp/media-kit-backup/ && npx create-next-app@latest . --typescript --tailwind --eslint --app --no-src-dir --import-alias \"@/*\" --skip-git)",
+      "Bash(npm install *)",
+      "Bash(node /tmp/create-placeholders.js)",
+      "Bash(npm run *)",
+      "Bash(git add *)",
+      "Bash(git commit -m 'Migrate: Next.js 14 with TypeScript & Tailwind CSS *)"
+    ],
+    "additionalDirectories": [
+      "\\tmp"
+    ]
+  }
+}
