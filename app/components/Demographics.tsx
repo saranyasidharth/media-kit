@@ -33,7 +33,7 @@ function DemoGroup({ title, bars }: DemoGroupProps) {
 
 export default function Demographics() {
   return (
-    <section className="bg-white rounded-section border border-border shadow-sm p-12 mb-9 hover:shadow-md transition-shadow duration-300 animate-fadeInUp">
+    <section className="bg-white rounded-section border border-border shadow-sm p-12 mb-9 hover:shadow-md transition-shadow duration-300" style={{animation: "fadeInUp 0.8s ease-out"}}>
       <h2 className="section-title mb-8">Audience Demographics</h2>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-5">

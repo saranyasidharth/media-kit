@@ -2,16 +2,17 @@ import { contentHighlights } from '@/lib/data'
 
 export default function ContentPerformance() {
   return (
-    <section className="bg-white rounded-section border border-border shadow-sm p-12 mb-9 hover:shadow-md transition-shadow duration-300 animate-fadeInUp">
+    <section className="bg-white rounded-section border border-border shadow-sm p-12 mb-9 hover:shadow-md transition-shadow duration-300" style={{animation: "fadeInUp 0.8s ease-out"}}>
       <h2 className="section-title mb-8">Content Performance Highlights</h2>
 
       <div className="text-center mb-6">
         <div
-          className="inline-block px-6 py-3 rounded-full font-bold text-sm tracking-widest animate-pulse"
+          className="inline-block px-6 py-3 rounded-full font-bold text-sm tracking-widest"
           style={{
             background:
               'linear-gradient(135deg, var(--primary-color), var(--accent-color))',
             color: 'white',
+            animation: 'pulse 2s ease-in-out infinite',
           }}
         >
           ⚡ 16.5× Reach Multiplier (83.8K reach from 5K followers)

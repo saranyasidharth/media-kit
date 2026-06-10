@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section className="bg-white rounded-section border border-border shadow-sm p-12 mb-9 hover:shadow-md transition-shadow duration-300 animate-fadeInUp">
+    <section className="bg-white rounded-section border border-border shadow-sm p-12 mb-9 hover:shadow-md transition-shadow duration-300" style={{animation: "fadeInUp 0.8s ease-out"}}>
       <h2 className="section-title mb-8">About Me</h2>
 
       <div className="text-base md:text-lg leading-relaxed text-text-medium space-y-5">
